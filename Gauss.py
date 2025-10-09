@@ -30,7 +30,7 @@ def gauss_elimination(A, b):
     # Gauss Elimination
     while i < n:
         if augmented_matrix[i][i] == 0.0:  # Avoid division by zero
-            print("Divide by zero")
+            print("Divided by zero")
             return  
 
         for j in range(i + 1, n):
@@ -53,7 +53,35 @@ def gauss_elimination(A, b):
 
     print (f"The solution of the system is: {new_line}{x}")
 
+ # Verification Step
+    # Calculate A*x
+    b_calculated = np.dot(A, x)
+    b_calculated_reshaped = b_calculated.reshape(-1, 1)
+
+    # Print the calculated b vector
+    print(f"Original b vector: {new_line}{b}")
+    print(f"Calculated b vector (A * x): {new_line}{b_calculated_reshaped}")
+    
+    # Check if the calculated b is close to the original b
+    if np.allclose(b, b_calculated_reshaped):
+        print("\nVerification successful! The solution is correct")
+    else:
+        print("\nVerification failed. The solution is incorrect")
+
+    return x
+
 # Input matrices here
-variable_matrix = np.array([[0, 2, 4, 1], [-1, 0, 2, 5], [2, 3, 0, 5], [5, 1, 2 , 0]])
-constant_matrix = np.array([[1], [-6], [8], [-4]])
+variable_matrix = np.array([
+    [0, 2, 4, 1],
+    [-1, 0, 2, 5],
+    [2, 3, 0, -1],
+    [5, 1, 2, 0]
+])
+constant_matrix = np.array([
+    [1],
+    [-6],
+    [8],
+    [-4]
+])
+
 gauss_elimination(variable_matrix, constant_matrix)

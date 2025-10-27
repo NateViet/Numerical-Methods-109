@@ -1,0 +1,47 @@
+The Lower Triangular Matrix is: 
+[[ 1.          0.          0.          0.        ]
+ [-1.          1.          0.          0.        ]
+ [ 0.         -0.33333333  1.          0.        ]
+ [ 0.         -0.         -0.27272727  1.        ]]
+The Upper Triangular Matrix is:
+[[ 1.         -4.          1.          0.        ]
+ [ 0.         -3.          1.          0.        ]
+ [ 0.          0.         -3.66666667  1.        ]
+ [ 0.          0.          0.         -0.72727273]]
+The solution of the system is:
+[-7.25 -4.25  2.25 -4.75]
+Original b vector:
+[  7 -18  12   3]
+Calculated b vector (A * x):
+[  7. -18.  12.   3.]
+
+Verification successful! The solution is correct
+
+==============================
+
+Jacobi Iteration 1: [0.2        0.66666667 0.6        0.8       ]
+Jacobi Iteration 2: [0.31066667 0.68666667 0.64933333 0.79466667]
+Jacobi Iteration 3: [0.30624    0.67497778 0.64872    0.79869333]
+Jacobi Iteration 4: [0.30731591 0.67549956 0.64787342 0.79875004]
+Jacobi Iteration 5: [0.30736761 0.67520547 0.64789365 0.79878265]
+
+Jacobi convergence achieved after 5 iterations.
+The solution of the system is:
+[0.30736761 0.67520547 0.64789365 0.79878265]
+
+==============================
+
+Gauss-Seidel Iteration 1: [0.2        0.63333333 0.64666667 0.79533333]
+Gauss-Seidel Iteration 2: [0.3076     0.67511111 0.64785689 0.79880178]
+Gauss-Seidel Iteration 3: [0.30738672 0.67518974 0.64786744 0.79879167]
+
+Gauss-Seidel convergence achieved after 3 iterations.
+The solution of the system is:
+[0.30738672 0.67518974 0.64786744 0.79879167]
+
+
+Question 4d:
+In this case, Gauss-Seidel converges quicker taking 3 iterations compared to the 5 iterations
+it took for Jacobi to reach a same answer. This make sense as Jacobi "updates" the x variable 
+after a simultaneous calculation, while Gauss-Seidel makes use of the successive nature of the 
+calculations to calculate each x1, x2, and x3.

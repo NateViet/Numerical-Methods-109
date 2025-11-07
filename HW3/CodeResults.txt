@@ -1,0 +1,15 @@
+Question 2
+(b)
+    (i) Final Euler value at x=10: 32.980933429107246
+    (ii) Final RK4 value at x=10:   33.025850929111385
+
+Question 6
+(b) Euler Predictor-Corrector:
+    C_A(10) ≈ 0.00004622
+    C_B(10) ≈ 0.59997689
+    C_C(10) ≈ 0.39997689
+
+(c) 4th-Order Runge-Kutta (RK4):
+    C_A(10) ≈ 0.00004540
+    C_B(10) ≈ 0.59997730
+    C_C(10) ≈ 0.39997730
